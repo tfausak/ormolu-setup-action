@@ -1,0 +1,16 @@
+name: CI
+on:
+  push: null
+jobs:
+  action:
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v5
+      - uses: ./
+      - run: ormolu --version
+    strategy:
+      matrix:
+        os:
+          - macos-latest
+          - ubuntu-latest
+          - windows-latest

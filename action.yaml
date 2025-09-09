@@ -1,0 +1,15 @@
+name: Setup Ormolu
+description: Installs the ormolu executable for formatting Haskell modules.
+branding:
+  color: purple
+  icon: download
+runs:
+  main: index.js
+  using: node20
+inputs:
+  token:
+    default: ${{ github.token }}
+    description: The token to use when communicating with GitHub's API.
+  version:
+    default: latest
+    description: The version of Ormolu to use.
