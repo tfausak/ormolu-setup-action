@@ -5,7 +5,7 @@ branding:
   icon: download
 runs:
   main: index.js
-  using: node20
+  using: node24
 inputs:
   token:
     default: ${{ github.token }}
